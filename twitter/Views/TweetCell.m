@@ -25,7 +25,7 @@
     _tweet = tweet;
     
     self.userNameLabel.text = self.tweet.user.name;
-    self.userScreenNameLabel.text = self.tweet.user.screenName;
+    self.userScreenNameLabel.text = [NSString stringWithFormat:@"@%@", self.tweet.user.screenName];
     self.createdAtLabel.text = self.tweet.createdAtString;
     self.tweetTextLabel.text = self.tweet.text;
     // self.replyLabel =
