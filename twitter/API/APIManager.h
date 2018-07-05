@@ -19,9 +19,10 @@
 -(void)postStatusWithText:(NSString *)text completion:(void(^)(Tweet *, NSError *))completion;
 
 
-/*
-//- (void)favoriteTweetWithCompletion:(void(^)(NSArray *tweets, NSError *error))completion;
 
+- (void)favoriteTweetWithCompletion:(Tweet *)tweet completion:(void(^)(Tweet *, NSError *))completion;
+
+- (void)unfavoriteTweetWithCompletion:(Tweet *)tweet completion:(void(^)(Tweet *, NSError *))completion;
 //- (void)RetweetWithCompletion:(void(^)(NSArray *tweets, NSError *error))completion;
-*/
+
 @end

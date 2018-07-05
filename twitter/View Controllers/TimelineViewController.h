@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TimelineViewController : UIViewController
+#import "ComposeViewController.h"
+@interface TimelineViewController : UIViewController <ComposeViewControllerDelegate>
 
 - (void)fetchTweets;
--(void)noNetworkAlert;
+- (void)noNetworkAlert;
 
 @end

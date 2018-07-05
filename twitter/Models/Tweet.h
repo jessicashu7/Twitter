@@ -26,7 +26,13 @@
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
+- (void)toggleFavorite;
+
+- (void)toggleRetweet;
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries;
+
+
     
 @end
 

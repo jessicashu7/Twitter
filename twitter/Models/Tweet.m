@@ -54,6 +54,28 @@
     return self;
 }
 
+- (void)toggleFavorite{
+    if (self.favorited){
+        self.favorited = NO;
+        self.favoriteCount -= 1;
+    }
+    else {
+        self.favorited = YES;
+        self.favoriteCount += 1;
+    }
+}
+
+- (void)toggleRetweet{
+    if (self.retweeted){
+        self.retweeted = NO;
+        self.retweetCount -= 1;
+    }
+    else {
+        self.retweeted = YES;
+        self.retweetCount += 1;
+    }
+}
+
 + (NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries{
     NSMutableArray *tweets = [[NSMutableArray alloc] init];
     for (NSDictionary *dictionary in dictionaries){

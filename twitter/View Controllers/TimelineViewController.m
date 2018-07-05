@@ -10,7 +10,7 @@
 #import "APIManager.h"
 #import "TweetCell.h"
 #import "ComposeViewController.h"
-@interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface TimelineViewController () < UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray * tweets;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

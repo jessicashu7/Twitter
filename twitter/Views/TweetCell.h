@@ -25,4 +25,5 @@
 
 @property (strong, nonatomic) Tweet *tweet;
 
+-(void)refreshData;
 @end
