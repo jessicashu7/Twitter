@@ -79,7 +79,6 @@
 				6AD278D720BC4B950085BC29 /* twitter */,
 				6AD278D620BC4B950085BC29 /* Products */,
 				8D3B9352D6FC41D4058E12C5 /* Pods */,
-				038B3E5FF5428BF9C6A8E0DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +157,7 @@
 			children = (
 				75895B6507775E8AFBEEA2D9 /* Pods-twitter.debug.xcconfig */,
 				1397EA94AE1DE5F26C1724FD /* Pods-twitter.release.xcconfig */,
+				038B3E5FF5428BF9C6A8E0DA /* Frameworks */,
 			);
 			name = Pods;
 			sourceTree = "<group>";

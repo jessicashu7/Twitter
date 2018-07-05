@@ -47,23 +47,29 @@
             
         } else {
             NSLog(@"😫😫😫 Error getting home timeline: %@", error.localizedDescription);
+            [self noNetworkAlert];
             
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network Error" message:@"Check your connection" preferredStyle:(UIAlertControllerStyleAlert)];
-            
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * _Nonnull action) {
-             // handle response here.
-                                                             }];
-            // add the OK action to the alert controller
-            [alert addAction:okAction];
-            [self presentViewController:alert animated:YES completion:^{
-                // optional code for what happens after the alert controller has finished presenting
-            }];
         }
         [self.refreshControl endRefreshing];
     }];
 }
+
+-(void)noNetworkAlert{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network Error" message:@"Check your connection" preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         // handle response here.
+                                                     }];
+    // add the OK action to the alert controller
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:^{
+        // optional code for what happens after the alert controller has finished presenting
+    }];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

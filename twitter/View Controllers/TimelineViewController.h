@@ -11,5 +11,6 @@
 @interface TimelineViewController : UIViewController
 
 - (void)fetchTweets;
+-(void)noNetworkAlert;
 
 @end
