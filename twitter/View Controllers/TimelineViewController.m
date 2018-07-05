@@ -9,9 +9,10 @@
 #import "TimelineViewController.h"
 #import "APIManager.h"
 #import "TweetCell.h"
-@interface TimelineViewController () <UITableViewDataSource, UITableViewDelegate>
+#import "ComposeViewController.h"
+@interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSArray * tweets;
+@property (strong, nonatomic) NSMutableArray * tweets;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -42,7 +43,7 @@
              NSLog(@"%@", text);
              
              }*/
-            self.tweets = tweets;
+            self.tweets = [NSMutableArray arrayWithArray:tweets];
             [self.tableView reloadData];
             
         } else {
@@ -86,16 +87,25 @@
     
 }
 
+-(void)didTweet:(Tweet *)tweet{
+    [self.tweets insertObject:tweet atIndex:0];
+    [self.tableView reloadData];
+    NSLog(@"reload after tweet");
+}
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UINavigationController *navigationController = [segue destinationViewController];
+    ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+    composeController.delegate = self;
+    
+    
 }
-*/
+
 
 
 @end

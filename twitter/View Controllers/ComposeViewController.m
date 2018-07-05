@@ -19,8 +19,11 @@
 - (IBAction)sendTweet:(id)sender {
     [[APIManager shared] postStatusWithText:self.tweetText.text completion:^(Tweet * tweet, NSError * error) {
         if (tweet){
+            NSLog(@"Compose Tweet Success!");
+            [self.delegate didTweet:tweet];
         }
         else {
+            NSLog(@"Error composing Tweet: %@", error.localizedDescription);
 
         }
         [self dismissViewControllerAnimated:true completion:nil];
@@ -54,3 +57,5 @@
 
 
 @end
+
+
