@@ -30,6 +30,26 @@
 - (IBAction)didTapRetweet:(id)sender {
     [self.tweet toggleRetweet];
     [self refreshData];
+    if (self.tweet.retweeted){
+        [[APIManager shared] retweetWithCompletion:self.tweet completion:^(Tweet * tweet, NSError * error) {
+            if(error){
+                NSLog(@"Error retweeting tweet: %@", error.localizedDescription);
+            }
+            else {
+                NSLog(@"Successfully retweeted the following Tweet: %@", tweet.text);
+            }
+        }];
+    }
+    else {
+        [[APIManager shared] unretweetWithCompletion:self.tweet completion:^(Tweet * tweet, NSError * error) {
+            if(error){
+                NSLog(@"Error unretweeting tweet: %@", error.localizedDescription);
+            }
+            else {
+                NSLog(@"Successfully unretweeting the following Tweet: %@", tweet.text);
+            }
+        }];
+    }
 }
 
 
@@ -89,4 +109,6 @@
 
     // reply button
 }
+
+
 @end
