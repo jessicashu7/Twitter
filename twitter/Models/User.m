@@ -16,7 +16,10 @@
         self.name = dictionary[@"name"];
         self.screenName = dictionary[@"screen_name"];
         self.profileImageString = dictionary[@"profile_image_url_https"];
-        //NSLog(@"%@", self.profileImageString);
+        self.bannerImageString = dictionary[@"profile_banner_url"];
+        self.following = [dictionary[@"friends_count"] intValue];
+        self.followers = [dictionary[@"followers_count"] intValue ];
+        self.tweets = [dictionary[@"statuses_count"] intValue ];
     }
     return self;
     

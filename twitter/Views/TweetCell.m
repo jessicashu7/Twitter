@@ -14,6 +14,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+     UITapGestureRecognizer *profileTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapUserProfile:)];
+     [self.profileImageView addGestureRecognizer:profileTapGestureRecognizer];
+     [self.profileImageView setUserInteractionEnabled:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -110,5 +113,9 @@
     // reply button
 }
 
-
+- (void)didTapUserProfile:(UITapGestureRecognizer * ) sender{
+    NSLog(@"profile view tapped");
+    [self.delegate tweetCell:self didTap:self.tweet.user];
+    
+}
 @end

@@ -12,6 +12,7 @@
 #import "ComposeViewController.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "ProfileViewController.h"
 
 @interface TimelineViewController () < UITableViewDataSource, UITableViewDelegate>
 
@@ -86,6 +87,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
     cell.tweet = self.tweets[indexPath.row];
+    cell.delegate = self;
     return cell;
     
 }
@@ -94,6 +96,11 @@
     [self.tweets insertObject:tweet atIndex:0];
     [self.tableView reloadData];
     NSLog(@"reload after tweet");
+}
+
+- (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user{
+    // TODO: Perform segue to profile view controller
+    [self performSegueWithIdentifier:@"profileSegue" sender:user];
 }
 
 - (IBAction)didTapLogout:(id)sender {
@@ -105,16 +112,24 @@
     [[APIManager shared] logout];
 }
 
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier  isEqual: @"createTweetSegue"]){
     UINavigationController *navigationController = [segue destinationViewController];
     ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
     composeController.delegate = self;
-    
+    }
+    else if ([segue.identifier  isEqual: @"profileSegue"]){
+        User *user = sender;
+        NSLog(@"%@", user.name);
+        ProfileViewController *profileViewController = [segue destinationViewController];
+        profileViewController.user = user;
+    }
     
 }
 

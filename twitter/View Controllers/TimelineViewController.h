@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ComposeViewController.h"
-@interface TimelineViewController : UIViewController <ComposeViewControllerDelegate>
+#import "TweetCell.h"
+
+@interface TimelineViewController : UIViewController <ComposeViewControllerDelegate, TweetCellDelegate>
 
 - (void)fetchTweets;
 - (void)noNetworkAlert;
