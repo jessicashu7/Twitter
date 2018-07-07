@@ -2,7 +2,7 @@
 
 Twitter is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent:24 hours spent in total
 
 ## User Stories
 
@@ -72,5 +72,3 @@ Learning to work with Twitter API.
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
-
-=
