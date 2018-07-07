@@ -1,28 +1,30 @@
 //
-//  TweetCell.m
+//  DetailTweetViewController.m
 //  twitter
 //
-//  Created by Jessica Shu on 7/3/18.
+//  Created by Jessica Shu on 7/6/18.
 //  Copyright © 2018 Emerson Malca. All rights reserved.
 //
 
-#import "TweetCell.h"
+#import "DetailTweetViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "APIManager.h"
-@implementation TweetCell
+@interface DetailTweetViewController ()
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-     UITapGestureRecognizer *profileTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapUserProfile:)];
-     [self.profileImageView addGestureRecognizer:profileTapGestureRecognizer];
-     [self.profileImageView setUserInteractionEnabled:YES];
+@end
+
+@implementation DetailTweetViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+   // self.userNameLabel.text = @"wat";
+    // Do any additional setup after loading the view.
+    [self refreshData];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void)setTweet:(Tweet *)tweet{
@@ -56,7 +58,6 @@
     }
 }
 
-
 - (IBAction)didTapFavorite:(id)sender {
     // TODO: Update the local tweet model
     [self.tweet toggleFavorite];
@@ -81,6 +82,7 @@
             else {
                 NSLog(@"Successfully unfavorited the following Tweet: %@", tweet.text);
             }
+            
         }];
     }
 }
@@ -114,9 +116,17 @@
     // reply button
 }
 
-- (void)didTapUserProfile:(UITapGestureRecognizer * ) sender{
-    NSLog(@"profile view tapped");
-    [self.delegate tweetCell:self didTap:self.tweet.user];
-    
+
+
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
+
 @end

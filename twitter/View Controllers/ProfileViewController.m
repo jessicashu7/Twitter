@@ -41,7 +41,7 @@
     
 }
 -(void)refreshData{
-    NSLog(@"refresh data called");
+    //NSLog(@"refresh data called");
     [self.bannerImageView setImageWithURL:[NSURL URLWithString:self.user.bannerImageString]];
     [self.profileImageView
      setImageWithURL:[NSURL URLWithString:self.user.profileImageString]];

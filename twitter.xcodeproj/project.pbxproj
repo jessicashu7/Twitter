@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2978B4FC20F0342C00E82C7D /* DetailTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978B4FB20F0342C00E82C7D /* DetailTweetViewController.m */; };
 		2989678A20EF43170075CEF7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2989678920EF43170075CEF7 /* ProfileViewController.m */; };
 		29A6090320EAD94600525C85 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6090220EAD94600525C85 /* User.m */; };
 		29A6090620EADBE600525C85 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6090520EADBE600525C85 /* Tweet.m */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		1397EA94AE1DE5F26C1724FD /* Pods-twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.release.xcconfig"; sourceTree = "<group>"; };
+		2978B4FA20F0342C00E82C7D /* DetailTweetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTweetViewController.h; sourceTree = "<group>"; };
+		2978B4FB20F0342C00E82C7D /* DetailTweetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTweetViewController.m; sourceTree = "<group>"; };
 		2989678820EF43170075CEF7 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		2989678920EF43170075CEF7 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		29A6090120EAD94600525C85 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -98,7 +101,6 @@
 			children = (
 				6AD2790320BCC01B0085BC29 /* View Controllers */,
 				6AD278FF20BCBF280085BC29 /* Views */,
-				6AD278F720BCB6900085BC29 /* API */,
 				6AD278F820BCBC140085BC29 /* Models */,
 				6AD278D820BC4B950085BC29 /* AppDelegate.h */,
 				6AD278D920BC4B950085BC29 /* AppDelegate.m */,
@@ -138,6 +140,7 @@
 			children = (
 				29AA12AB20EBF4DB00128F2A /* TweetCell.h */,
 				29AA12AC20EBF4DB00128F2A /* TweetCell.m */,
+				6AD278F720BCB6900085BC29 /* API */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +156,8 @@
 				29AA12B120EC40CD00128F2A /* ComposeViewController.m */,
 				2989678820EF43170075CEF7 /* ProfileViewController.h */,
 				2989678920EF43170075CEF7 /* ProfileViewController.m */,
+				2978B4FA20F0342C00E82C7D /* DetailTweetViewController.h */,
+				2978B4FB20F0342C00E82C7D /* DetailTweetViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29AA12AF20EBF4EC00128F2A /* TweetCell.m in Sources */,
+				2978B4FC20F0342C00E82C7D /* DetailTweetViewController.m in Sources */,
 				6AD278F320BCA6020085BC29 /* BDBOAuth1SessionManager+SFAuthenticationSession.m in Sources */,
 				29A6090320EAD94600525C85 /* User.m in Sources */,
 				29AA12B220EC40CD00128F2A /* ComposeViewController.m in Sources */,

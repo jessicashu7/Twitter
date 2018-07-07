@@ -9,8 +9,8 @@
 #import "APIManager.h"
 #import "Tweet.h"
 static NSString * const baseURLString = @"https://api.twitter.com";
-static NSString * const consumerKey = @"kEie1dfiInrEpsqzIpNf6MjeZ" ;// Enter your consumer key here
-static NSString * const consumerSecret = @"8AjJq6qTMlnKSMbche5zfAI79wD6ir4vrJc4zqfojOMMC9O7eM";// Enter your consumer secret here
+static NSString * const consumerKey = @"KgwfZiKKJ01mCwCXVBDknl63E" ;// Enter your consumer key here
+static NSString * const consumerSecret = @"teoObyTa6Pag3GfLKEtnDP3bsOgWDsNv1HlHyebDR5FqkZaAfs";// Enter your consumer secret here
 
 @interface APIManager()
 
@@ -29,7 +29,8 @@ static NSString * const consumerSecret = @"8AjJq6qTMlnKSMbche5zfAI79wD6ir4vrJc4z
 
 - (instancetype)init {
     
-    NSURL *baseURL = [NSURL URLWithString:baseURLString];
+    NSURL *baseURL = [NSURL URLWithString:baseURLString
+                      ];
     NSString *key = consumerKey;
     NSString *secret = consumerSecret;
     // Check for launch arguments override

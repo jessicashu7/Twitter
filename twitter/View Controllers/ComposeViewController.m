@@ -18,6 +18,8 @@
 @implementation ComposeViewController
 
 - (IBAction)sendTweet:(id)sender {
+    //NSLog(@"send tweet");
+    
     [[APIManager shared] postStatusWithText:self.tweetText.text completion:^(Tweet * tweet, NSError * error) {
         if (tweet){
             NSLog(@"Compose Tweet Success!");

@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
+#import "DetailTweetViewController.h"
 
 @interface TimelineViewController () < UITableViewDataSource, UITableViewDelegate>
 
@@ -95,7 +96,7 @@
 -(void)didTweet:(Tweet *)tweet{
     [self.tweets insertObject:tweet atIndex:0];
     [self.tableView reloadData];
-    NSLog(@"reload after tweet");
+    //NSLog(@"reload after tweet");
 }
 
 - (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user{
@@ -126,9 +127,16 @@
     }
     else if ([segue.identifier  isEqual: @"profileSegue"]){
         User *user = sender;
-        NSLog(@"%@", user.name);
+        //NSLog(@"%@", user.name);
         ProfileViewController *profileViewController = [segue destinationViewController];
         profileViewController.user = user;
+    }
+    else if ([segue.identifier  isEqual: @"detailTweetSegue"]){
+        TweetCell *tappedCell = sender;
+        DetailTweetViewController *detailViewController = [segue destinationViewController];
+        detailViewController.tweet = tappedCell.tweet;
+        //NSLog(@"%@", detailViewController.tweet.text);
+        //NSLog(@"end segue");
     }
     
 }
