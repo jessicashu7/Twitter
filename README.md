@@ -52,7 +52,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 ## Video Walkthrough
 
-Alt Text](https://i.imgur.com/KB854Zd.gif)
+![Alt Text](https://i.imgur.com/KB854Zd.gif)
 ![Alt Text](https://i.imgur.com/WrHZs9N.gi) 
 ![Alt Text](https://i.imgur.com/ZL2bINT.gif) 
 ![Alt Text](https://i.imgur.com/BGK64BV.gif) 
