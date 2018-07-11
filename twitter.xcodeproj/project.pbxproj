@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E832C13FF6B1FDF06C00776 /* libPods-twitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A45D4B6FFF440C66365692 /* libPods-twitter.a */; };
 		2978B4FC20F0342C00E82C7D /* DetailTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2978B4FB20F0342C00E82C7D /* DetailTweetViewController.m */; };
 		2989678A20EF43170075CEF7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2989678920EF43170075CEF7 /* ProfileViewController.m */; };
 		29A6090320EAD94600525C85 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6090220EAD94600525C85 /* User.m */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1397EA94AE1DE5F26C1724FD /* Pods-twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter/Pods-twitter.release.xcconfig"; sourceTree = "<group>"; };
+		26A45D4B6FFF440C66365692 /* libPods-twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2978B4FA20F0342C00E82C7D /* DetailTweetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTweetViewController.h; sourceTree = "<group>"; };
 		2978B4FB20F0342C00E82C7D /* DetailTweetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTweetViewController.m; sourceTree = "<group>"; };
 		2989678820EF43170075CEF7 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557D7B17F5D2B5715B705AA9 /* libPods-twitter.a in Frameworks */,
+				0E832C13FF6B1FDF06C00776 /* libPods-twitter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				6AD278D720BC4B950085BC29 /* twitter */,
 				6AD278D620BC4B950085BC29 /* Products */,
 				8D3B9352D6FC41D4058E12C5 /* Pods */,
+				BCAF3796B4A19708899CE07C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +176,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BCAF3796B4A19708899CE07C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26A45D4B6FFF440C66365692 /* libPods-twitter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +195,7 @@
 				6AD278D120BC4B950085BC29 /* Sources */,
 				6AD278D220BC4B950085BC29 /* Frameworks */,
 				6AD278D320BC4B950085BC29 /* Resources */,
+				24D786EA75834446BDBAA89F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +252,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24D786EA75834446BDBAA89F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-twitter/Pods-twitter-resources.sh",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twitter/Pods-twitter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2753FB299E6FD685DF7178D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
